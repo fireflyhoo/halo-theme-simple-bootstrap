@@ -153,32 +153,6 @@
 
         <#--公共 head 代码，包含：Favicon，站点验证代码-->
         <@global.head />
-        <#--开启灰度模式(特殊日期)-->
-        <#if (settings.open_gray)??>
-            <script type="text/javascript" src="https://img.coollf.com/grayscale.js"></script>
-            <style type="text/css">
-                /* 特殊日子 全站灰色 */
-            .site-gray, .site-gray *{
-                filter: gray !important;
-                filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-                filter: grayscale(100%);
-                -webkit-filter: grayscale(100%);
-                -moz-filter: grayscale(100%);
-                -ms-filter: grayscale(100%);
-                -o-filter: grayscale(100%); 
-            }
-            </style>
-            <script type="text/javascript">
-                $(function(){
-                    var navStr = navigator.userAgent.toLowerCase();
-                    var gray = $(this).attr("data-gray");
-                    grayscale(document.body);
-                    grayscale(document.getElementsByTagName("img"));
-                    $("html").addClass("site-gray");
-                    $(this).attr("data-gray", 1);
-                });
-            </script>
-        </#if>
         <title>${title}</title>
 
     </head>
@@ -315,6 +289,32 @@
     <div id="backTop" class="back-top">
         <span><i class="fas fa-caret-up"></i></span>
     </div>
+    <#--开启灰度模式(特殊日期)-->
+        <#if (settings.open_gray)??>
+            <script type="text/javascript" src="https://img.coollf.com/grayscale.js"></script>
+            <style type="text/css">
+                /* 特殊日子 全站灰色 */
+            .site-gray, .site-gray *{
+                filter: gray !important;
+                filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+                filter: grayscale(100%);
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                -o-filter: grayscale(100%); 
+            }
+            </style>
+            <script type="text/javascript">
+                $(function(){
+                    var navStr = navigator.userAgent.toLowerCase();
+                    var gray = $(this).attr("data-gray");
+                    grayscale(document.body);
+                    grayscale(document.getElementsByTagName("img"));
+                    $("html").addClass("site-gray");
+                    $(this).attr("data-gray", 1);
+                });
+            </script>
+        </#if>
     </body>
     </html>
 </#macro>
