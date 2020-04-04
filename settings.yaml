@@ -36,6 +36,17 @@ general:
           label: 启用
         - value: false
           label: 关闭
+    open_gray:
+      name: open_gray
+      label: 是否启用灰度模式
+      type: radio
+      data-type: bool
+      default: false
+      options:
+        - value: true
+          label: 启用
+        - value: false
+          label: 关闭
     open_read_progress:
       name: open_read_progress
       label: 是否使用阅读进度条
