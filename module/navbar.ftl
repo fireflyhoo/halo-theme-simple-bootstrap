@@ -15,7 +15,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse pl-1" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse pl-1" id="navbarSupportedContent" style="font-size: 13px;">
             <ul class="navbar-nav mr-auto">
                 <#-- ?sort_by('priority')：根据菜单的排序编号排序 -->
                 <@menuTag method="list">
